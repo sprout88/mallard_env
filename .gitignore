@@ -1,0 +1,4 @@
+.codeql-db-js/
+output/
+__pycache__/
+*.pyc
