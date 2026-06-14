@@ -21,7 +21,9 @@ This helps security analysts separate likely malicious behavior from operational
 - queries/javascript-security-and-quality/env-to-exfil.ql
 	- Custom CodeQL query for environment-variable-to-sink taint flow
 - scripts/run_codeql_scan.sh
-	- End-to-end runner: database create -> analyze -> report conversion
+	- Bash runner for Unix-like environments
+- scripts/run_codeql_scan.py
+	- Cross-platform runner (recommended on Windows)
 - scripts/sarif_to_tree.py
 	- Converts SARIF to a compact JSON tree and markdown triage report
 - output/
@@ -34,6 +36,18 @@ This helps security analysts separate likely malicious behavior from operational
 - Target codebase with JavaScript/TypeScript sources
 
 ## Run
+
+Windows (Python interface):
+
+```powershell
+python scripts/run_codeql_scan.py
+```
+
+Windows (scan another path):
+
+```powershell
+python scripts/run_codeql_scan.py examples/js-demo
+```
 
 Scan the current repository:
 
